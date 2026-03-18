@@ -11,7 +11,7 @@
       "php": {
         "version": "8.2"
       },
-      "nodejs": {
+      "node": {
         "version": "20"
       }
     }
