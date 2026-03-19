@@ -3,16 +3,13 @@
   "build": {
     "builder": "nixpacks",
     "config": {
-      "buildCommand": "composer update --no-scripts --no-dev && npm install && npm run build",
+      "buildCommand": "composer update --no-scripts --no-dev && npm ci && npm run build",
       "startCommand": "vendor/bin/heroku-php-apache2 public/",
       "nixpacks": {
-        "providers": ["php", "nodejs"]
-      },
-      "php": {
-        "version": "8.2"
-      },
-      "node": {
-        "version": "20"
+        "providers": ["php", "nodejs"],
+        "node": {
+          "version": "20"
+        }
       }
     }
   }
