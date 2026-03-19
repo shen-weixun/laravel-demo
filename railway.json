@@ -4,7 +4,7 @@
     "builder": "nixpacks",
     "config": {
       "buildCommand": "composer update --no-scripts --no-dev && npm ci && npm run build",
-      "startCommand": "vendor/bin/heroku-php-apache2 public/",
+      "startCommand": "php artisan serve --host=0.0.0.0 --port=${PORT:-8000}",
       "nixpacks": {
         "providers": ["php", "nodejs"],
         "node": {
